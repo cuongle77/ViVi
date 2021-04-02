@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Cart from "./pages/Cart";
+import HomePages from "./pages/Home/HomePages";
 
-function App() {
+import "./root.css";
+import HomeTemPlate from "./templates/HomeTemPlate";
+
+function mainVivi() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Switch>
+          <HomeTemPlate exact path="/cart" Component={Cart} />
+
+          <Route exact path="/" component={HomePages} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
 
-export default App;
+export default mainVivi;

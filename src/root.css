@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+}
+
+.grid__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.column-12 {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.column-4 {
+  width: 33.33334%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ptb-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.d__table {
+  display: table !important;
+}
+
+.d__table__cell {
+  display: table-cell !important;
+}
+
+.default__btn {
+  font-size: 15px;
+  line-height: 15px;
+  text-decoration: none;
+  display: inline-block;
+  height: 100%;
+  transition: all 0.5s;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  color: #000;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 4px;
+  font-weight: 700;
+  border: 1px solid #272b2b;
+  margin-bottom: -4px;
+  padding: 15px 40px;
+}
+
+.default__btn:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #000;
+}
+
+.default__btn.two {
+  background: #000;
+  color: #fff;
+}
+
+.default__btn.two:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.owl-theme .owl-nav {
+  margin-top: 0;
+  display: none;
+}
+
+.owl-theme .owl-dots {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+.owl-theme .owl-dots .owl-dot:focus,
+.modal-video-close-btn:focus {
+  border: none;
+  outline: none;
+}

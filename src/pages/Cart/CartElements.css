@@ -1,0 +1,176 @@
+.bg__cart {
+  background-image: url("../../assets/image/page-banner10.jpg");
+}
+
+.bg__cart::before {
+  content: "";
+  position: absolute;
+  background: #000000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999;
+}
+
+.page__title__content {
+  z-index: 10;
+}
+
+.page__title__content h2 {
+  color: #fff;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.page__title__content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.page__title__content ul li {
+  position: relative;
+  display: inline-block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 10px;
+}
+
+.page__title__content ul li:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(100% + 10px);
+  width: 1px;
+  height: 100%;
+  background: #fff;
+  transform: rotate(25deg);
+}
+
+.page__title__content ul li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.25s linear;
+}
+
+.page__title__content ul li:hover > a {
+  text-decoration: none;
+  color: #e2a850;
+}
+
+.page__title__content ul li.active {
+  color: #e2a850;
+}
+
+/* ======== STYLE CART AREA ======== */
+.table__bordered > thead > tr > th,
+.table__bordered > tbody > tr > td {
+  border: none;
+}
+
+.cart__wraps > .cart__table > .table > thead > tr > th {
+  font-weight: 600;
+  font-size: 1.8rem;
+  border: none;
+  border-bottom: 1px solid #eaedff;
+  text-transform: uppercase;
+  color: #272b2b;
+  padding-top: 0;
+}
+
+.cart__wraps > .cart__table > .table > tbody > tr > td {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-bottom: 1px solid #eaedff;
+}
+
+.coupon__cart {
+  margin-top: 40px;
+}
+
+.coupon__cart .form-group input {
+  display: block;
+  position: relative;
+  height: 50px;
+  padding: 12px 16px;
+  font-size: 1.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.coupon__cart .form-group input:focus {
+  outline: none;
+  border: 1px solid #000;
+  box-shadow: unset;
+}
+
+.coupon__cart .form-group button {
+  position: absolute;
+  display: block;
+  left: 63%;
+  border: 1px solid #000;
+  outline: none;
+  top: 0;
+  height: 50px;
+  width: 35%;
+  background: #737676;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.25s ease-in;
+}
+
+.coupon__cart .form-group button:hover {
+  background: #fff;
+  color: #737676;
+}
+
+.update__cart__btn {
+  height: 100%;
+}
+
+.update__cart__btn .two:hover {
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+}
+
+.cart__totals h3 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cart__totals ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.cart__totals ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 1.4rem;
+  color: #272b2b;
+  font-weight: 600;
+  opacity: 0.7;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart__totals ul li:last-child {
+  font-weight: 800;
+  border-bottom: none;
+}
