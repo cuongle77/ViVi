@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const MainNav = styled.div`
-  position: absolute;
+  position: ${({ scroll }) => (scroll ? "fixed" : "absolute")};
   width: 100%;
   z-index: 999;
   background: #fff;
+  box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
 
   .nav__area {
     padding-left: 50px;

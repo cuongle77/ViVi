@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MainNav, Nav } from "./NavbarElements";
 
 function Navbar({ handleOpenSideBar }) {
+  const [scroll, setScroll] = useState(false);
+  const handleScroll = () => {
+    const lastScroll = window.scrollY;
+    if (lastScroll > 250) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
   return (
     <>
-      <MainNav>
+      <MainNav scroll={scroll}>
         <div className="container-fluid nav__area">
           <Nav>
             <NavLink to="/" className="logo__brand">

@@ -24,7 +24,7 @@ const VideoCreated = () => {
                 className="popup__youtube"
                 onClick={() => setOpen(true)}
               >
-                <i class="far fa-play-circle"></i>
+                <i className="far fa-play-circle"></i>
               </a>
               <h2>Video Created By Vivi</h2>
             </div>

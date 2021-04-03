@@ -1,0 +1,41 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?cb556261b7a936b224da383d231391e2") format("truetype"),
+url("./flaticon.woff?cb556261b7a936b224da383d231391e2") format("woff"),
+url("./flaticon.woff2?cb556261b7a936b224da383d231391e2") format("woff2"),
+url("./flaticon.eot?cb556261b7a936b224da383d231391e2#iefix") format("embedded-opentype"),
+url("./flaticon.svg?cb556261b7a936b224da383d231391e2#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "advertising": "\f101",
+    "entertainment": "\f102",
+    "film-editing-1": "\f103",
+    "film-editing": "\f104",
+);
+
+.flaticon-advertising:before {
+    content: map-get($flaticon-map, "advertising");
+}
+.flaticon-entertainment:before {
+    content: map-get($flaticon-map, "entertainment");
+}
+.flaticon-film-editing-1:before {
+    content: map-get($flaticon-map, "film-editing-1");
+}
+.flaticon-film-editing:before {
+    content: map-get($flaticon-map, "film-editing");
+}

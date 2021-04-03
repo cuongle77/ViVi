@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import About from "../../components/About";
 import HeroSlider from "../../components/HeroSlider";
 import Navbar from "../../components/Navbar";
+import Products from "../../components/Products";
 import SideBar from "../../components/SideBar";
+import Solutions from "../../components/Solutions";
+import Testimonial from "../../components/Testimonial";
 import VideoCreated from "../../components/VideoCreated";
 
 function HomePages() {
@@ -23,6 +26,9 @@ function HomePages() {
       <HeroSlider />
       <About />
       <VideoCreated />
+      <Solutions />
+      <Testimonial />
+      <Products />
     </>
   );
 }

@@ -3,6 +3,23 @@ import styled from "styled-components";
 export const HeroContainer = styled.section`
   position: relative;
 
+  .owl-theme .owl-dots {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+  }
+
+  .owl-theme .owl-nav {
+    margin-top: 0;
+    display: none;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 12px;
+    height: 12px;
+    display: block;
+  }
+
   .hero__sider__item {
     background-position: 50%;
     background-repeat: no-repeat;

@@ -16,7 +16,7 @@ const HeroSlider = () => {
           autoplay
           smartSpeed={1000}
           loop
-          autoplayTimeout={40000}
+          autoplayTimeout={7000}
           autoplayHoverPause
           mouseDrag={false}
           margin={0.02}

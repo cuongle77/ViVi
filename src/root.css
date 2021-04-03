@@ -43,6 +43,14 @@ html {
   padding-bottom: 70px;
 }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-mince-30 {
+  margin-top: -30px;
+}
+
 .d__table {
   display: table !important;
 }
@@ -87,23 +95,6 @@ html {
 .default__btn.two:hover {
   background-color: #fff;
   color: #000;
-}
-
-.owl-theme .owl-nav {
-  margin-top: 0;
-  display: none;
-}
-
-.owl-theme .owl-dots {
-  position: absolute;
-  right: 50px;
-  bottom: 50px;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  width: 12px;
-  height: 12px;
-  display: block;
 }
 
 .owl-theme .owl-dots .owl-dot:focus,
