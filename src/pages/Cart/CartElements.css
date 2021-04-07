@@ -86,11 +86,79 @@
 
 .cart__wraps > .cart__table > .table > tbody > tr > td {
   vertical-align: middle;
-  text-align: center;
+  text-align: left;
+  text-transform: uppercase;
   font-size: 15px;
   font-weight: 600;
   border: none;
   border-bottom: 1px solid #eaedff;
+}
+
+.cart__wraps > .cart__table > .table > tbody > tr > td > .cart__counter {
+  display: inline-block;
+  border: 1px solid #999;
+}
+
+.cart__wraps > .cart__table > .table > tbody > tr > td > .cart__counter button {
+  border: none;
+  outline: none;
+  background: transparent;
+  display: inline-block;
+  padding: 5px 10px;
+  transition: all 0.5s;
+}
+
+.cart__wraps
+  > .cart__table
+  > .table
+  > tbody
+  > tr
+  > td
+  > .cart__counter
+  > button:hover {
+  background: #333;
+  color: #fff;
+}
+
+.cart__wraps
+  > .cart__table
+  > .table
+  > tbody
+  > tr
+  > td
+  > .cart__counter
+  button
+  i {
+  font-weight: 600;
+}
+
+.cart__wraps > .cart__table > .table > tbody > tr > td > .cart__counter span {
+  display: inline-block;
+  padding: 5px 12px;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  color: #555;
+}
+
+.cart__wraps > .cart__table > .table > tbody > tr > td > .btn__delete {
+  display: inline-block;
+  border: none;
+  outline: none;
+  background: #f9f7f7;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.cart__wraps > .cart__table > .table > tbody > tr > td > .btn__delete:hover {
+  background: #f00;
+  color: #fff;
+}
+
+.cart__wraps > .cart__table > .table > tbody > tr > td > .btn__delete > i {
+  display: inline-block;
 }
 
 .coupon__cart {

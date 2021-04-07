@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const ProductContainer = styled.section`
-  background-color: #fff;
-
   .section__title {
     max-width: 750px;
     margin: -6px auto 50px;
@@ -184,6 +182,54 @@ export const ProductContainer = styled.section`
 
       .tab__item.active {
         display: block;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .section__title {
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+    }
+
+    .tab {
+      .tab__content {
+        .tab__item {
+          .products {
+            padding: 0 40px;
+            margin-bottom: 20px;
+          }
+          .products__content {
+            text-align: center;
+
+            span {
+              margin-bottom: 10px;
+            }
+            h2 {
+              font-size: 2.5rem;
+              margin-bottom: 10px;
+            }
+
+            p {
+              margin-left: 0px;
+              margin-bottom: 20px;
+              opacity: 0.6;
+
+              &::before {
+                display: none;
+              }
+            }
+
+            .default__btn {
+              margin-left: 0px;
+            }
+          }
+        }
       }
     }
   }

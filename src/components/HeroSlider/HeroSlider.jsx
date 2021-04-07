@@ -9,7 +9,7 @@ const HeroSlider = () => {
   let { arrHeroSlide } = useSelector((state) => state.heroSlideReducer);
   return (
     <>
-      <HeroContainer>
+      <HeroContainer className="hero__slider">
         <OwlCarousel
           className="owl-theme"
           items="1"
@@ -20,7 +20,6 @@ const HeroSlider = () => {
           autoplayHoverPause
           mouseDrag={false}
           margin={0.02}
-          nav
           dots
         >
           {arrHeroSlide.map((item, index) => {
@@ -50,6 +49,32 @@ const HeroSlider = () => {
             );
           })}
         </OwlCarousel>
+
+        <div className="social__wrap">
+          <ul>
+            <li className="follow__us">Follow Us:</li>
+            <li>
+              <a href="##">
+                <i className="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="##">
+                <i className="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="##">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="##">
+                <i className="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </HeroContainer>
     </>
   );

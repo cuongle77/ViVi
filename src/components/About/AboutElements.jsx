@@ -59,4 +59,49 @@ export const AboutContainer = styled.section`
       display: none;
     }
   }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .about__content__wrap {
+      background-image: unset;
+      height: auto;
+
+      .about__content {
+        margin-top: 0px;
+        text-align: center;
+        margin-bottom: 40px;
+
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+        }
+
+        p {
+          margin-left: 0;
+          font-size: 1.5rem;
+          line-height: 2.2rem;
+          opacity: 0.6;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        .default__btn {
+          margin-top: 30px;
+          margin-left: 0px;
+        }
+      }
+
+      .about__img {
+        display: block;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
 `;

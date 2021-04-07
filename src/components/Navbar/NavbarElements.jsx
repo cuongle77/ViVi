@@ -11,6 +11,13 @@ export const MainNav = styled.div`
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  @media only screen and (max-width: 991px) {
+    .nav__area {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
 `;
 
 export const Nav = styled.nav`
@@ -245,5 +252,29 @@ export const Nav = styled.nav`
         }
       }
     }
+  }
+
+  @media only screen and (max-width: 991px) {
+    .nav__menu,
+    .search__form,
+    .nav__cart {
+      display: none;
+    }
+
+    .other__option {
+      .nav__mobile-icon {
+        margin-left: 0;
+        .nav__mobile-icon__btn {
+          i {
+            line-height: 3.5rem;
+            font-size: 3.5rem;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
   }
 `;

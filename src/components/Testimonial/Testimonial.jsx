@@ -17,7 +17,7 @@ const Testimonial = () => {
             autoplayTimeout={7000}
             autoplayHoverPause
             loop
-            margin={10}
+            margin={20}
             dots
             navClass
           >

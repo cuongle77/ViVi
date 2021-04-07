@@ -11,6 +11,10 @@ export const SideBarContainer = styled.div`
   visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
   transition: all 0.25s linear;
   z-index: 1000;
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    display: none;
+  }
 `;
 
 export const SideBarContent = styled.div`
@@ -177,5 +181,9 @@ export const SideBarContent = styled.div`
         }
       }
     }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    display: none;
   }
 `;

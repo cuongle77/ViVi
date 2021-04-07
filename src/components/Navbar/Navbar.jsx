@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { MainNav, Nav } from "./NavbarElements";
 
-function Navbar({ handleOpenSideBar }) {
+function Navbar({ handleOpenSideBar }, props) {
   const [scroll, setScroll] = useState(false);
   const handleScroll = () => {
     const lastScroll = window.scrollY;
@@ -12,8 +13,12 @@ function Navbar({ handleOpenSideBar }) {
       setScroll(false);
     }
   };
-
   window.addEventListener("scroll", handleScroll);
+
+  const { cartStore } = useSelector((state) => state.cartReducer);
+  const totalPrdoductCart = cartStore.reduce((sum, item) => {
+    return (sum += item.quantity);
+  }, 0);
 
   return (
     <>
@@ -28,11 +33,12 @@ function Navbar({ handleOpenSideBar }) {
               <li className="nav__menu__item">
                 <NavLink to="/" className="menu__item__link">
                   HOME
-                  <i className="fas fa-angle-down"></i>
+                  {/* <i className="fas fa-angle-down"></i> */}
                 </NavLink>
               </li>
+
               <li className="nav__menu__item">
-                <NavLink to="###" className="menu__item__link">
+                <NavLink to="/about" className="menu__item__link">
                   ABOUT
                 </NavLink>
               </li>
@@ -45,17 +51,19 @@ function Navbar({ handleOpenSideBar }) {
 
                 <ul className="nav__sub__menu">
                   <li className="sub__menu_item">
-                    <NavLink to="###">TESTIMONIALS</NavLink>
+                    <NavLink to="/testimonials">TESTIMONIALS</NavLink>
                   </li>
                   <li className="sub__menu_item">
-                    <NavLink to="###">
+                    <NavLink to="">
                       PORTFOLIOR
                       <i className="fas fa-angle-down"></i>
                     </NavLink>
 
                     <ul className="nav__sub__menu">
                       <li className="sub__menu_item">
-                        <NavLink to="###">Portfolio Columns Two</NavLink>
+                        <NavLink to="/portfolio-columns-two">
+                          Portfolio Columns Two
+                        </NavLink>
                       </li>
                       <li className="sub__menu_item">
                         <NavLink to="###">Portfolio Columns Three</NavLink>
@@ -102,6 +110,7 @@ function Navbar({ handleOpenSideBar }) {
                   </li>
                 </ul>
               </li>
+
               <li className="nav__menu__item">
                 <NavLink to="###" className="menu__item__link">
                   SHOP
@@ -123,6 +132,7 @@ function Navbar({ handleOpenSideBar }) {
                   </li>
                 </ul>
               </li>
+
               <li className="nav__menu__item">
                 <NavLink to="###" className="menu__item__link">
                   BLOG
@@ -144,6 +154,7 @@ function Navbar({ handleOpenSideBar }) {
                   </li>
                 </ul>
               </li>
+
               <li className="nav__menu__item">
                 <NavLink to="###" className="menu__item__link">
                   CONTACT
@@ -161,7 +172,7 @@ function Navbar({ handleOpenSideBar }) {
                 <NavLink to="/cart" className="nav__cart__link">
                   <i className="fas fa-shopping-cart"></i>
 
-                  <span>0</span>
+                  <span>{totalPrdoductCart}</span>
                 </NavLink>
               </div>
 

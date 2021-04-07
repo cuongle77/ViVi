@@ -20,21 +20,21 @@ const Solutions = () => {
 
                 <div className="brand__wrap">
                   <div className="row">
-                    <div className="col-lg-4 col-md-6 col-sm-4">
+                    <div className="col-lg-4 col-sm-6 col-md-4">
                       <div className="brand">
                         <a href="###">
                           <img src="./image/brand1.png" alt="" />
                         </a>
                       </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 col-sm-4">
+                    <div className="col-lg-4 col-sm-6 col-md-4">
                       <div className="brand">
                         <a href="###">
                           <img src="./image/brand2.png" alt="" />
                         </a>
                       </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 col-sm-4 offset-sm-3 offset-md-0">
+                    <div className="col-lg-4 col-sm-6 col-md-4 offset-sm-3 offset-md-0">
                       <div className="brand">
                         <a href="###">
                           <img src="./image/brand3.png" alt="" />

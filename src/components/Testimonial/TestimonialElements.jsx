@@ -6,6 +6,7 @@ export const TestimonialContainer = styled.section`
   background-size: cover;
   background-position: center center;
   position: relative;
+  overflow: hidden;
 
   .owl-theme .owl-dots {
     margin-top: 100px !important;
@@ -80,6 +81,35 @@ export const TestimonialContainer = styled.section`
     span {
       display: block;
       font-size: 1.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .testimonial__item {
+      i {
+        font-size: 5rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        line-height: 3rem;
+      }
+
+      h3 {
+        font-size: 2.2rem;
+        word-spacing: 3px;
+        line-height: 3rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      span {
+        display: block;
+        font-size: 1.5rem;
+      }
     }
   }
 `;

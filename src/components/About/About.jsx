@@ -22,7 +22,7 @@ const About = () => {
                     film stock producing video content. It is the
                   </p>
 
-                  <a href="" className="default__btn">
+                  <a href="###" className="default__btn">
                     Learn more
                   </a>
                 </div>

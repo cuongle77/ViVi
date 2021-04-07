@@ -19,13 +19,9 @@ const VideoCreated = () => {
                 videoId="bk7McNUjWgw"
                 onClose={() => setOpen(false)}
               />
-              <a
-                href="###"
-                className="popup__youtube"
-                onClick={() => setOpen(true)}
-              >
+              <button className="popup__youtube" onClick={() => setOpen(true)}>
                 <i className="far fa-play-circle"></i>
-              </a>
+              </button>
               <h2>Video Created By Vivi</h2>
             </div>
           </div>

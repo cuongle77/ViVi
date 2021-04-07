@@ -1,0 +1,367 @@
+.bg__about {
+  background-color: #000;
+  background-image: url("../../assets/image/page-banner1.jpg");
+}
+
+.bg__about::before {
+  content: "";
+  position: absolute;
+  background: #000000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999;
+}
+
+.page__title__content {
+  z-index: 10;
+}
+
+.page__title__content h2 {
+  color: #fff;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.page__title__content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.page__title__content ul li {
+  position: relative;
+  display: inline-block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 10px;
+}
+
+.page__title__content ul li:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(100% + 10px);
+  width: 1px;
+  height: 100%;
+  background: #fff;
+  transform: rotate(25deg);
+}
+
+.page__title__content ul li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.25s linear;
+}
+
+.page__title__content ul li:hover > a {
+  text-decoration: none;
+  color: #e2a850;
+}
+
+.page__title__content ul li.active {
+  color: #e2a850;
+}
+
+/* ========== STYLE ABOUT__AREA__TWO =========== */
+
+.about__content span {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about__content h2 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  color: #272b2b;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.about__content h3 {
+  position: relative;
+  padding-left: 100px;
+  font-size: 18px;
+  color: #272b2b;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.about__content h3::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 70px;
+  height: 2px;
+  background-color: #272b2b;
+}
+
+.about__content p {
+  padding-left: 100px;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+.about__grid__img {
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.about__grid__img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========== STYLE COUNTER__AREA =============  */
+.single__counter {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.single__counter h3 {
+  margin-bottom: 0;
+  font-size: 40px;
+  color: #272b2b;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.single__counter p {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+/* ============= STYLE OUR__PRODUCTION__AREA =============== */
+.bg__color {
+  background-color: #fafafa;
+}
+
+.section__title {
+  margin-bottom: 20px;
+  max-width: 750px;
+  margin: -6px auto 50px;
+  text-align: center;
+  position: relative;
+}
+
+.section__title span {
+  text-transform: uppercase;
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section__title h2 {
+  font-size: 50px;
+  position: relative;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  display: block;
+  color: #272b2b;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.what__we__do__item {
+  border: none;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.5s;
+}
+
+.what__we__do__item:hover {
+  transform: translateY(-5px);
+}
+
+.what__we__do__item i {
+  font-size: 60px;
+  margin-bottom: 20px;
+  display: block;
+  color: #272b2b;
+  line-height: 1;
+}
+
+.what__we__do__item h3 {
+  margin-bottom: 10px;
+  color: #272b2b;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.what__we__do__item p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-family: Open Sans, sans-serif;
+  line-height: 1.8;
+  opacity: 0.6;
+}
+
+/* =========== STYLE TEAM__AREA__TWO ============= */
+.single__team {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.single__team:hover > .team__img::before {
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.single__team:hover > .team__img .social {
+  opacity: 1;
+  visibility: visible;
+}
+
+.single__team .team__img {
+  position: relative;
+}
+
+.team__img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(transparent, #000);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.single__team .team__img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.single__team .team__img .social {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  line-height: 1;
+  transition: all 0.5s;
+}
+
+.single__team .team__img .social li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.single__team .team__img .social li a {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.single__team .team__img .social li a:hover {
+  transform: translateY(-5px);
+}
+
+.single__team .team__img .social li a i {
+  font-size: 1.6rem;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.single__team .team__content {
+  margin-top: 20px;
+}
+
+.single__team .team__content h3 {
+  font-size: 2.2rem;
+  color: #272b2b;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.single__team .team__content span {
+  font-size: 1.6rem;
+  opacity: 0.7;
+}
+
+/*  =============== STYLE COLLABORATE__AREA ============== */
+
+.collaborate__img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.collaborate__form form .form-group {
+  margin-bottom: 25px;
+}
+
+.collaborate__form form label {
+  font-size: 1.6rem;
+  font-family: Open Sans, sans-serif;
+  margin-bottom: 10px;
+  color: #272b2b;
+  font-weight: 6 00;
+}
+
+.collaborate__form form .form-control {
+  height: 50px;
+  color: #272b2b;
+  border: 1px dashed #676a6a;
+  background-color: #fff;
+  border-radius: 0;
+  font-size: 13px;
+  padding: 10px 20px;
+  width: 100%;
+  font-family: Open Sans, sans-serif;
+}
+
+.collaborate__form form .form-control:focus {
+  border: 1px solid #676a6a;
+  box-shadow: none;
+}
+
+.collaborate__form textarea.form-control {
+  height: auto;
+}
+
+.collaborate__form form button.default__btn {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 17px 30px;
+}
+
+.partner__item {
+  text-align: center;
+}
+
+.partner__item a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.partner__item img {
+  width: unset;
+  margin: auto;
+}

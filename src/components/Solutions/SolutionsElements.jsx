@@ -98,4 +98,58 @@ export const SolutionsContainer = styled.section`
       line-height: 1.8;
     }
   }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    .what__we__do__content {
+      text-align: center;
+      margin-bottom: 30px;
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-left: 0;
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        opacity: 0.6;
+        margin-bottom: 30px;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      .brand__wrap {
+        margin-left: 0px;
+        margin-bottom: 30px;
+        .brand {
+          a {
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.5s;
+
+            &:hover {
+              transform: translateY(-6px);
+            }
+            img {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .default__btn {
+        margin-left: 0px;
+      }
+    }
+
+    .what__we__do__item {
+      margin-top: 0;
+    }
+  }
 `;

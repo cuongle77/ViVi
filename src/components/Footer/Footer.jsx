@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FooterTop, FooterBottom } from "./FooterElements";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <>
       <FooterTop className="pt-100 pb-70">
@@ -24,22 +24,22 @@ export const Footer = () => {
                     placeholder="Enter email address"
                   />
                   <button>
-                    <i class="fas fa-arrow-right"></i>
+                    <i className="fas fa-arrow-right"></i>
                   </button>
                 </form>
 
                 <div className="contact__social">
                   <a href="####">
-                    <i class="fab fa-twitter"></i>
+                    <i className="fab fa-twitter"></i>
                   </a>
                   <a href="####">
-                    <i class="fab fa-instagram"></i>
+                    <i className="fab fa-instagram"></i>
                   </a>
                   <a href="####">
-                    <i class="fab fa-facebook-f"></i>
+                    <i className="fab fa-facebook-f"></i>
                   </a>
                   <a href="####">
-                    <i class="fab fa-youtube"></i>
+                    <i className="fab fa-youtube"></i>
                   </a>
                 </div>
               </div>
@@ -158,3 +158,5 @@ export const Footer = () => {
     </>
   );
 };
+
+export default Footer;

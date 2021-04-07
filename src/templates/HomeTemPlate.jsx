@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Route } from "react-router";
-import { Footer } from "../components/Footer/Footer";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import SideBar from "../components/SideBar";
 
