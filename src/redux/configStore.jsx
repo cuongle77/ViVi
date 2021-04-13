@@ -8,6 +8,8 @@ import { partnerReducer } from "./reducers/PartnerReducer";
 import { blogReducer } from "./reducers/BlogReducer";
 import { cartReducer } from "./reducers/CartReducer";
 import { portfolioColumnsTwoReducer } from "./reducers/PortfolioColumnsTwoReducer";
+import { aboutPageReducer } from "./reducers/AboutPageReducer";
+import { testimonialReducer } from "./reducers/TestmonialReducer";
 
 const rootReducers = combineReducers({
   heroSlideReducer,
@@ -19,6 +21,8 @@ const rootReducers = combineReducers({
   blogReducer,
   cartReducer,
   portfolioColumnsTwoReducer,
+  aboutPageReducer,
+  testimonialReducer,
 });
 
 export const store = createStore(rootReducers);

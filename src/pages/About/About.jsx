@@ -10,6 +10,8 @@ import { useSelector } from "react-redux";
 
 const About = () => {
   const { partnerStoreAbout } = useSelector((state) => state.partnerReducer);
+  const { teamStore } = useSelector((state) => state.teamReducer);
+  const { productionStore } = useSelector((state) => state.aboutPageReducer);
   return (
     <>
       <PageTitleArea className="bg__about">
@@ -118,71 +120,17 @@ const About = () => {
           </div>
 
           <div className="row">
-            <div className="col-lg-4 col-sm-6">
-              <div className="what__we__do__item">
-                <i className="flaticon-film-editing"></i>
-                <h3>Video Production</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt labore dolore magna.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="what__we__do__item">
-                <i className="flaticon-advertising"></i>
-                <h3>Video Production</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt labore dolore magna.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="what__we__do__item">
-                <i className="flaticon-entertainment"></i>
-                <h3>Video Production</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt labore dolore magna.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="what__we__do__item">
-                <i className="flaticon-film-editing"></i>
-                <h3>Video Production</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt labore dolore magna.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="what__we__do__item">
-                <i className="flaticon-advertising"></i>
-                <h3>Video Production</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt labore dolore magna.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="what__we__do__item">
-                <i className="flaticon-entertainment"></i>
-                <h3>Video Production</h3>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt labore dolore magna.
-                </p>
-              </div>
-            </div>
+            {productionStore?.map((item, index) => {
+              return (
+                <div key={index} className="col-lg-4 col-sm-6">
+                  <div className="what__we__do__item">
+                    <i className={`${item.iconImg}`}></i>
+                    <h3>{item.name}</h3>
+                    <p>{item.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -195,94 +143,39 @@ const About = () => {
           </div>
 
           <div className="row">
-            <div className="col-lg-4 col-sm-6">
-              <div className="single__team">
-                <div className="team__img">
-                  <img src="./image/team1.jpg" alt="" />
+            {teamStore.splice(0, 3)?.map((item, index) => {
+              return (
+                <div key={index} className="col-lg-4 col-sm-6">
+                  <div className="single__team">
+                    <div className="team__img">
+                      <img src={item.url} alt={item.name} />
 
-                  <ul className="social">
-                    <li>
-                      <a href="###">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="###">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="###">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                  </ul>
+                      <ul className="social">
+                        <li>
+                          <a href="###">
+                            <i className="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="###">
+                            <i className="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="###">
+                            <i className="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="team__content">
+                      <h3>{item.name}</h3>
+                      <span>{item.job}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="team__content">
-                  <h3>Phyllis Trimble</h3>
-                  <span>Director, Producer</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="single__team">
-                <div className="team__img">
-                  <img src="./image/team2.jpg" alt="" />
-
-                  <ul className="social">
-                    <li>
-                      <a href="###">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="###">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="###">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="team__content">
-                  <h3>Phyllis Trimble</h3>
-                  <span>Director, Producer</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-sm-6">
-              <div className="single__team">
-                <div className="team__img">
-                  <img src="./image/team3.jpg" alt="" />
-                  <ul className="social">
-                    <li>
-                      <a href="###">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="###">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="###">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="team__content">
-                  <h3>Phyllis Trimble</h3>
-                  <span>Director, Producer</span>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>

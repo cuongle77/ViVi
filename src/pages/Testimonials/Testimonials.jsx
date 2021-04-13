@@ -1,9 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import PageTitleArea from "../../components/PageTitleArea/PageTitleArea";
 import "./Testimonials.css";
 
 const Testimonials = () => {
+  const { testimonialStore } = useSelector((state) => state.testimonialReducer);
   return (
     <>
       <PageTitleArea className="bg__testimonials">
@@ -23,89 +25,19 @@ const Testimonials = () => {
       <section className="testimonial__page__area ptb-100">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6">
-              <div className="testimonial__text">
-                <img src="./image/client1.jpg" alt="" />
-                <i className="fas fa-quote-right"></i>
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida.ipsum dolor sit amet”
-                </p>
-                <h3>Kara Goldberg</h3>
-                <span>Director of Festwork</span>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="testimonial__text">
-                <img src="./image/client2.jpg" alt="" />
-                <i className="fas fa-quote-right"></i>
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida.ipsum dolor sit amet”
-                </p>
-                <h3>Kara Goldberg</h3>
-                <span>Director of Festwork</span>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="testimonial__text">
-                <img src="./image/client3.jpg" alt="" />
-                <i className="fas fa-quote-right"></i>
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida.ipsum dolor sit amet”
-                </p>
-                <h3>Kara Goldberg</h3>
-                <span>Director of Festwork</span>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="testimonial__text">
-                <img src="./image/client4.jpg" alt="" />
-                <i className="fas fa-quote-right"></i>
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida.ipsum dolor sit amet”
-                </p>
-                <h3>Kara Goldberg</h3>
-                <span>Director of Festwork</span>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="testimonial__text">
-                <img src="./image/client5.jpg" alt="" />
-                <i className="fas fa-quote-right"></i>
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida.ipsum dolor sit amet”
-                </p>
-                <h3>Kara Goldberg</h3>
-                <span>Director of Festwork</span>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="testimonial__text">
-                <img src="./image/client6.jpg" alt="" />
-                <i className="fas fa-quote-right"></i>
-                <p>
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida.ipsum dolor sit amet”
-                </p>
-                <h3>Kara Goldberg</h3>
-                <span>Director of Festwork</span>
-              </div>
-            </div>
+            {testimonialStore?.map((item, index) => {
+              return (
+                <div key={index} className="col-lg-6">
+                  <div className="testimonial__text">
+                    <img src={item.url} alt={item.name} />
+                    <i className="fas fa-quote-right"></i>
+                    <p>{item.desc}</p>
+                    <h3>{item.name}</h3>
+                    <span>{item.job}</span>
+                  </div>
+                </div>
+              );
+            })}
 
             <div className="col-lg-12 col-md-6">
               <div className="pagination__area text-center">

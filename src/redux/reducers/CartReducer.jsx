@@ -20,7 +20,7 @@ export const cartReducer = (state = stateDefault, action) => {
         cartStoreUpdate.push(action.item);
       }
       state.cartStore = cartStoreUpdate;
-      localStorage.setItem("cartStore", JSON.stringify(cartStoreUpdate));
+      localStorage.setItem("cartStore", JSON.stringify(state.cartStore));
 
       return { ...state };
     }
@@ -52,6 +52,7 @@ export const cartReducer = (state = stateDefault, action) => {
       }
 
       state.cartStore = cartStoreUpdate;
+      localStorage.setItem("cartStore", JSON.stringify(state.cartStore));
 
       return { ...state };
     }
