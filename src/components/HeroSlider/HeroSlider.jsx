@@ -5,6 +5,8 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import { HeroContainer } from "./HeroSliderElements";
 import { useSelector } from "react-redux";
 
+import { Animated } from "react-animated-css";
+
 const HeroSlider = () => {
   let { arrHeroSlide } = useSelector((state) => state.heroSlideReducer);
   return (
@@ -33,14 +35,21 @@ const HeroSlider = () => {
                   <div className="d__table__cell">
                     <div className="container">
                       <div className="hero__slider__text">
-                        <h1>{item.title}</h1>
-                        <p>{item.description}</p>
+                        <Animated className="fadeInUp" animationInDelay={1000}>
+                          <h1>{item.title}</h1>
+                        </Animated>
 
-                        <div className="slider__btn ">
-                          <a href="###" className="default__btn">
-                            View more
-                          </a>
-                        </div>
+                        <Animated className="fadeInUp" animationInDelay={2000}>
+                          <p>{item.description}</p>
+                        </Animated>
+
+                        <Animated className="fadeInUp" animationInDelay={3000}>
+                          <div className="slider__btn ">
+                            <a href="###" className="default__btn">
+                              View more
+                            </a>
+                          </div>
+                        </Animated>
                       </div>
                     </div>
                   </div>

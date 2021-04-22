@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import About from "../../components/About";
+import BackToTop from "../../components/BackToTop";
 import Blog from "../../components/Blog";
 import ExclusiveHop from "../../components/ExclusiveHop";
 import Footer from "../../components/Footer";
@@ -43,6 +44,7 @@ function HomePages() {
       <Partner />
       <Blog />
       <Footer />
+      <BackToTop />
     </>
   );
 }

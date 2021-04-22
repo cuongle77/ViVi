@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import PageTitleArea from "../../components/PageTitleArea";
-import "./PortfolioColumnsTwoElements.css";
+import "./PortfolioColumnsThree.css";
 import ModalVideo from "react-modal-video";
 import "react-modal-video/scss/modal-video.scss";
 import { useSelector } from "react-redux";
 
-const PortfolioColumnsTwo = () => {
+const PortfolioColumnsThree = () => {
   const [isOpen, setOpen] = useState(false);
   const { portfolioColumnsStore } = useSelector(
     (state) => state.portfolioColumnsReducer
@@ -21,15 +21,15 @@ const PortfolioColumnsTwo = () => {
         onClose={() => setOpen(false)}
       />
 
-      <PageTitleArea className="portfolio__bg">
+      <PageTitleArea className="portfolio__three__bg">
         <div className="container">
           <div className="page__title__content">
-            <h2>Portfolio Columns Two</h2>
+            <h2>Portfolio Columns Three</h2>
             <ul>
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li className="active">Portfolio Columns Two</li>
+              <li className="active">Portfolio Columns Three</li>
             </ul>
           </div>
         </div>
@@ -38,9 +38,9 @@ const PortfolioColumnsTwo = () => {
       <section className="portfolio__area ptb-100">
         <div className="container">
           <div className="row">
-            {portfolioColumnsStore.map((item, index) => {
+            {portfolioColumnsStore?.map((item, index) => {
               return (
-                <div key={index} className="col-lg-6 col-md-6">
+                <div key={index} className="col-lg-4 col-md-4">
                   <div className="single__portfolio">
                     <div
                       className="portfolio__image"
@@ -78,4 +78,4 @@ const PortfolioColumnsTwo = () => {
   );
 };
 
-export default PortfolioColumnsTwo;
+export default PortfolioColumnsThree;

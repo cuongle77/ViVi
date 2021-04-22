@@ -6,6 +6,8 @@ import ModalVideo from "react-modal-video";
 import "react-modal-video/scss/modal-video.scss";
 import { LatestTrailerContainer } from "./LatestTrailerElements";
 import { useSelector } from "react-redux";
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 const LatestTrailer = () => {
   const [isOpen, setOpen] = useState(false);
@@ -27,15 +29,21 @@ const LatestTrailer = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="latest__trailer__content">
-                <span>Latest Trailer</span>
-                <h2>Upcoming Movies By Our Production</h2>
-                <p>
-                  Video production work with producing video content. It is the
-                  analogical of film making, but the images are digitally
-                  recorded instead of film stock. There are three levels of
-                  video production: production, pre-production and
-                  post-production.
-                </p>
+                <Fade left>
+                  <span>Latest Trailer</span>
+                </Fade>
+                <Fade bottom>
+                  <h2>Upcoming Movies By Our Production</h2>
+                </Fade>
+                <Fade bottom>
+                  <p>
+                    Video production work with producing video content. It is
+                    the analogical of film making, but the images are digitally
+                    recorded instead of film stock. There are three levels of
+                    video production: production, pre-production and
+                    post-production.
+                  </p>
+                </Fade>
               </div>
             </div>
             <div className="col-lg-6">
@@ -51,18 +59,20 @@ const LatestTrailer = () => {
               >
                 {latestTrailerStore?.map((item, index) => {
                   return (
-                    <div key={index} className="latest__trailer__item">
-                      <img src={item.url} alt={item.url} />
-                      <div className="caption">
-                        <div className="d__table ">
-                          <div className="d__table__cell">
-                            <button onClick={() => setOpen(true)}>
-                              <i className="fas fa-play"></i>
-                            </button>
+                    <Zoom key={index}>
+                      <div className="latest__trailer__item">
+                        <img src={item.url} alt={item.url} />
+                        <div className="caption">
+                          <div className="d__table ">
+                            <div className="d__table__cell">
+                              <button onClick={() => setOpen(true)}>
+                                <i className="fas fa-play"></i>
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Zoom>
                   );
                 })}
               </OwlCarousel>

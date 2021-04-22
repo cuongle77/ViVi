@@ -66,10 +66,14 @@ function Navbar({ handleOpenSideBar }, props) {
                         </NavLink>
                       </li>
                       <li className="sub__menu_item">
-                        <NavLink to="###">Portfolio Columns Three</NavLink>
+                        <NavLink to="/portfolio-columns-three">
+                          Portfolio Columns Three
+                        </NavLink>
                       </li>
                       <li className="sub__menu_item">
-                        <NavLink to="###">Portfolio Columns Four</NavLink>
+                        <NavLink to="/portfolio-columns-four">
+                          Portfolio Columns Four
+                        </NavLink>
                       </li>
                       <li className="sub__menu_item">
                         <NavLink to="###">Portfolio Details</NavLink>

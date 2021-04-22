@@ -46,6 +46,7 @@ export const ExclusiveHopContainer = styled.section`
     h2 {
       font-size: 5rem;
       font-weight: 800;
+      color: #fff;
     }
   }
 

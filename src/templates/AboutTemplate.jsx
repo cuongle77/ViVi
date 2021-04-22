@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Route } from "react-router";
+import BackToTop from "../components/BackToTop";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import SideBar from "../components/SideBar";
@@ -25,6 +26,7 @@ const AboutTemplate = (props) => {
             <SideBar isOpen={isOpen} handleOpenSideBar={handleOpenSideBar} />
             <Component {...propsRoute} />
             <Footer />
+            <BackToTop />
           </>
         );
       }}

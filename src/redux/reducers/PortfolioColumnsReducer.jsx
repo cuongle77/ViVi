@@ -1,5 +1,5 @@
 const stateDefault = {
-  portfolioColumnsTwoStore: [
+  portfolioColumnsStore: [
     {
       url: "./image/portfolio1.jpg",
       type: "Action",
@@ -40,10 +40,15 @@ const stateDefault = {
       type: "Documentary",
       context: "journey by train",
     },
+    {
+      url: "./image/portfolio9.jpg",
+      type: "Action",
+      context: "first fighting",
+    },
   ],
 };
 
-export const portfolioColumnsTwoReducer = (state = stateDefault, action) => {
+export const portfolioColumnsReducer = (state = stateDefault, action) => {
   switch (action.type) {
     default:
       return { ...state };

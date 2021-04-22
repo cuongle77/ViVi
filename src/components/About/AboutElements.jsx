@@ -37,6 +37,7 @@ export const AboutContainer = styled.section`
         margin-bottom: 0;
         font-size: 1.6rem;
         line-height: 1.8;
+        padding-left: 0;
 
         &::before {
           content: "";
