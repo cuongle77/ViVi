@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const AboutContainer = styled.section`
   background-color: #fff;
   position: relative;
+  overflow: hidden;
 
   .about__content__wrap {
     background-image: url("./image/about-img1.jpg");
@@ -58,32 +59,36 @@ export const AboutContainer = styled.section`
 
     .about__img {
       display: none;
+
+      img {
+        max-width: 100%;
+      }
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  @media (min-width: 1024px) and (max-width: 1239px) {
+  }
 
+  @media (min-width: 740px) and (max-width: 1023px) {
+    padding: 0px 0 50px;
     .about__content__wrap {
       background-image: unset;
       height: auto;
 
       .about__content {
-        margin-top: 0px;
         text-align: center;
-        margin-bottom: 40px;
+
+        span {
+        }
 
         h2 {
           font-size: 2.5rem;
-          margin-bottom: 20px;
         }
 
         p {
-          margin-left: 0;
-          font-size: 1.5rem;
-          line-height: 2.2rem;
-          opacity: 0.6;
+          margin-left: 0px;
+          font-size: 1.6rem;
+          opacity: 0.5;
 
           &::before {
             display: none;
@@ -91,17 +96,53 @@ export const AboutContainer = styled.section`
         }
 
         .default__btn {
-          margin-top: 30px;
           margin-left: 0px;
         }
       }
 
       .about__img {
         display: block;
-        img {
-          max-width: 100%;
-          height: auto;
+        margin-top: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 739px) {
+    padding: 0px 0 30px;
+    .about__content__wrap {
+      background-image: unset;
+      height: auto;
+
+      .about__content {
+        text-align: center;
+        padding: 0 12px;
+
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
         }
+
+        p {
+          margin-left: 0px;
+          font-size: 1.4rem;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        .default__btn {
+          font-size: 1.2rem;
+          margin-left: 0px;
+          margin-top: 20px;
+          padding: 1.2rem 2rem;
+        }
+      }
+
+      .about__img {
+        padding: 0 12px;
+        display: block;
+        margin-top: 20px;
       }
     }
   }

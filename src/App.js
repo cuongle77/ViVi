@@ -8,6 +8,7 @@ import PortfolioColumnsThree from "./pages/PortfolioColumnsThree/PortfolioColumn
 import PortfolioColumnsTwo from "./pages/PortfolioColumnsTwo";
 import Testimonials from "./pages/Testimonials";
 import "./root.css";
+import "./assets/css/grid.css";
 import AboutTemplate from "./templates/AboutTemplate";
 import HomeTemPlate from "./templates/HomeTemPlate";
 

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const BlogContainer = styled.section`
+  overflow: hidden;
+
   .section__title {
     text-align: center;
     color: #000;
@@ -113,6 +115,67 @@ export const BlogContainer = styled.section`
 
         &:hover {
           letter-spacing: 3px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 740px) and (max-width: 1023px) {
+    padding: 50px 0 20px;
+
+    .section__title {
+      margin-bottom: 20px;
+      span {
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .single__blog {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 739px) {
+    padding: 30px 0 0;
+
+    .section__title {
+      margin-bottom: 20px;
+      span {
+        font-size: 1.4rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .single__blog {
+      padding: 0 12px;
+      margin-bottom: 30px;
+
+      .blog__content {
+        text-align: center;
+
+        ul {
+          justify-content: center;
+        }
+
+        a {
+          h3 {
+            font-size: 1.5rem;
+            line-height: 1.5;
+          }
+        }
+
+        p {
+          font-size: 1.4rem;
+        }
+
+        .learn__more {
+          font-size: 1.4rem;
         }
       }
     }

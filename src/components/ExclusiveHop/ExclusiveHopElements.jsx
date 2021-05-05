@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const ExclusiveHopContainer = styled.section`
-  background: #000;
   background-image: url("./image/exclusive-shop-bg.jpg");
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  z-index: 100;
   overflow: hidden;
+  z-index: 100;
 
   @keyframes rotated {
     100% {
@@ -25,10 +24,6 @@ export const ExclusiveHopContainer = styled.section`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: -1;
-  }
-
-  .container {
-    max-width: 1475px;
   }
 
   .section__title {
@@ -76,6 +71,8 @@ export const ExclusiveHopContainer = styled.section`
   .exclusvie__video__list {
     padding: 40px;
     background-color: #fff;
+    z-index: 20;
+
     .row {
       margin-bottom: 20px;
 
@@ -85,6 +82,7 @@ export const ExclusiveHopContainer = styled.section`
     }
 
     .exclusive__list__img {
+      z-index: 2;
       a {
         display: block;
         img {
@@ -154,14 +152,10 @@ export const ExclusiveHopContainer = styled.section`
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 740px) and (max-width: 1023px) {
     padding-top: 50px;
     padding-bottom: 50px;
     overflow: hidden;
-
-    .container {
-      padding: 0 40px;
-    }
 
     .section__title {
       h2 {
@@ -172,7 +166,7 @@ export const ExclusiveHopContainer = styled.section`
     .exclusvie__img {
       margin-bottom: 50px;
       .exclusvie__img-2 {
-        right: 5px;
+        right: -10px;
       }
     }
 
@@ -192,12 +186,68 @@ export const ExclusiveHopContainer = styled.section`
 
       .exclusive__text {
         text-align: center;
-        h3,
-        span,
-        ul {
-          margin-bottom: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 739px) {
+    padding: 40px 0;
+    .section__title {
+      margin-bottom: 20px;
+      span {
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .exclusvie__img {
+      padding: 0 12px 80px;
+
+      .exclusvie__img-2 {
+        top: 70px;
+        img {
+          display: block;
+          max-width: 90%;
+          margin: 0 auto;
         }
       }
     }
-  } ;
+
+    .exclusvie__video__list {
+      max-width: 95%;
+      margin: 0 auto;
+      .exclusive__list__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          display: inline-block;
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      .exclusive__text {
+        text-align: center;
+
+        ul {
+          li {
+            font-size: 1.6rem;
+            margin-right: 20px;
+
+            &:first-child {
+              &::before {
+                left: calc(100% + 10px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 `;

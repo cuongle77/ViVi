@@ -8,6 +8,7 @@ export const GetInTouchContainer = styled.section`
   background-repeat: no-repeat;
   position: relative;
   z-index: 100;
+  overflow: hidden;
 
   &::before {
     content: "";
@@ -44,22 +45,24 @@ export const GetInTouchContainer = styled.section`
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  @media (max-width: 739px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     .get__in__touch__content {
       h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
 
       p {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         margin: 20px 0 20px;
       }
 
       .default__btn {
-        padding: 15px 30px;
+        font-size: 1.2rem;
+        padding: 1.2rem 2rem;
+
         &:hover {
           border-color: #272b2b !important;
           background-color: #272b2b;

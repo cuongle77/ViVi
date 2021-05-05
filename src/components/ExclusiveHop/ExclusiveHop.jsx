@@ -22,14 +22,14 @@ const ExclusiveHop = () => {
   return (
     <>
       <ExclusiveHopContainer className="ptb-100">
-        <div className="container">
+        <div className="grid wide ">
           <div className="section__title">
             <span>Exclusive shop</span>
             <h2>Collect Your Movies Now!</h2>
           </div>
 
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col l-6 m-12 c-12">
               <div className="exclusvie__img">
                 <img src="./image/exclusive-product-img-1.jpg" alt="" />
                 <div className="exclusvie__img-2">
@@ -38,19 +38,20 @@ const ExclusiveHop = () => {
               </div>
             </div>
 
-            <div className="col-lg-6">
+            <div className="col l-6 m-12 c-12">
               <div className="exclusvie__video__list">
                 {exclusiveHopStore?.map((item, index) => {
                   return (
                     <div key={index} className="row">
-                      <div className="col-lg-3">
+                      <div className="col l-3 m-12 c-12">
                         <div className="exclusive__list__img">
                           <a href="###">
                             <img src={item.url} alt={item.name} />
                           </a>
                         </div>
                       </div>
-                      <div className="col-lg-9">
+
+                      <div className="col l-9 m-12 c-12">
                         <div className="exclusive__text">
                           <h3>
                             <a href="###">{item.name}</a>

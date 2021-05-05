@@ -242,3 +242,76 @@
   font-weight: 800;
   border-bottom: none;
 }
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .cart__area {
+    padding: 50px 0 !important;
+  }
+
+  .coupon__cart .form-group button {
+    width: 45%;
+    left: 52%;
+  }
+
+  .cart__area form {
+    margin-bottom: 30px;
+  }
+
+  .update__cart__btn .default__btn {
+    padding: 1.2rem 2rem;
+    line-height: unset;
+  }
+}
+
+@media (max-width: 739px) {
+  .cart__area {
+    padding: 30px 12px !important;
+  }
+
+  .cart__area form .cart__wraps .cart__table {
+    overflow-x: scroll;
+  }
+
+  .cart__wraps > .cart__table > .table > thead > tr > th {
+    padding: 0 40px 10px;
+    white-space: nowrap;
+  }
+
+  .cart__wraps > .cart__table > .table > thead > tr > th:first-child {
+    padding-left: 0.75rem;
+  }
+
+  .cart__wraps > .cart__table > .table > tbody > tr > td {
+    white-space: nowrap;
+    text-align: left !important;
+  }
+
+  .coupon__cart {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .coupon__cart .form-group button {
+    width: 30%;
+    left: unset;
+    right: 0;
+    font-size: 1rem;
+  }
+
+  .coupon__cart .form-group {
+    margin-bottom: 20px !important;
+  }
+
+  .update__cart__btn {
+    text-align: center !important;
+  }
+
+  .update__cart__btn .default__btn {
+    width: 100%;
+  }
+
+  .cart__totals .default__btn {
+    font-size: 1.2rem;
+    padding: 1.2rem 2rem;
+  }
+}

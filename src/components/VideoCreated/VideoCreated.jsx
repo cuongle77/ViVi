@@ -9,7 +9,7 @@ const VideoCreated = () => {
   return (
     <>
       <VideoCreatedContainer className="ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <div className="video__created__wrap">
             <Fade left>
               <img src="./image/video-created-img.jpg" alt="" />

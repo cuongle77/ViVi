@@ -131,3 +131,46 @@
 .single__portfolio .portfolio__content h3 a {
   color: #272b2b;
 }
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .modal-video .modal-video-body .modal-video-inner .modal-video-movie-wrap {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .modal-video
+    .modal-video-body
+    .modal-video-inner
+    .modal-video-movie-wrap
+    .modal-video-close-btn {
+    right: 0;
+  }
+
+  .portfolio__area {
+    padding: 50px 0px !important;
+  }
+}
+
+@media (max-width: 739px) {
+  .modal-video .modal-video-body .modal-video-inner .modal-video-movie-wrap {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .modal-video
+    .modal-video-body
+    .modal-video-inner
+    .modal-video-movie-wrap
+    .modal-video-close-btn {
+    right: 0;
+  }
+
+  .portfolio__area {
+    padding: 30px 12px !important;
+  }
+
+  .portfolio__btn .default__btn {
+    font-size: 1.2rem;
+    padding: 1.2rem 2.2rem;
+  }
+}

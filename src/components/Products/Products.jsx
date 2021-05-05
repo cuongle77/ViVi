@@ -14,7 +14,7 @@ const Products = () => {
   return (
     <>
       <ProductContainer className="ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <div className="section__title">
             <span>Products</span>
             <h2>Award Winning Movies</h2>
@@ -34,6 +34,7 @@ const Products = () => {
                 );
               })}
             </ul>
+
             <div className="tab__content">
               {productArrr?.map((item, index) => {
                 return (
@@ -46,12 +47,12 @@ const Products = () => {
                     }
                   >
                     <div className="row align-items-center">
-                      <div className="col-lg-6">
+                      <div className="col l-6 m-12 c-12">
                         <div className="products">
                           <img src={item.url} alt={item.movieName} />
                         </div>
                       </div>
-                      <div className="col-lg-6">
+                      <div className="col l-6 m-12 c-12">
                         <div className="products__content">
                           <span>{item.movieTheme}</span>
                           <h2>{item.movieName}</h2>

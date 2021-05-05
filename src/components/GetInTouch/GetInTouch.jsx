@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 const GetInTouch = () => {
   return (
     <GetInTouchContainer className="ptb-100">
-      <div className="container">
+      <div className="grid wide">
         <div className="get__in__touch__content">
           <Fade left>
             <h2>Do you like our work?</h2>

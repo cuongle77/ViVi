@@ -9,11 +9,31 @@ import { useSelector } from "react-redux";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 
-const LatestTrailer = () => {
+const LatestTrailer = (props) => {
   const [isOpen, setOpen] = useState(false);
   const { latestTrailerStore } = useSelector(
     (state) => state.latestTrailerReducer
   );
+
+  const settings = {
+    responsive: {
+      0: {
+        items: 1,
+      },
+
+      600: {
+        item: 2,
+      },
+
+      768: {
+        items: 2,
+      },
+
+      1000: {
+        items: 2,
+      },
+    },
+  };
 
   return (
     <>
@@ -25,9 +45,9 @@ const LatestTrailer = () => {
           videoId="L61p2uyiMSo"
           onClose={() => setOpen(false)}
         />
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
+        <div className="grid wide">
+          <div className="row row--custom">
+            <div className="col l-6">
               <div className="latest__trailer__content">
                 <Fade left>
                   <span>Latest Trailer</span>
@@ -46,14 +66,15 @@ const LatestTrailer = () => {
                 </Fade>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col l-6">
               <OwlCarousel
                 className="owl-theme"
                 loop
                 autoplayHoverPause
                 autoplay
                 smartSpeed={2000}
-                items={2}
+                responsiveClass={true}
+                responsive={settings.responsive}
                 margin={30}
                 dots
               >

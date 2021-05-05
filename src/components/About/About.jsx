@@ -7,14 +7,15 @@ const About = () => {
   return (
     <>
       <AboutContainer className="ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <div className="about__content__wrap">
             <div className="row">
-              <div className="col-lg-8">
+              <div className="col l-8 m-12 c-12">
                 <div className="about__content">
                   <Fade left>
                     <span>VIVI BIO</span>
                   </Fade>
+
                   <Fade bottom>
                     <h2>WE ARE A CREATIVE VIDEO PRODUCTION COMPANY</h2>
                   </Fade>
@@ -37,7 +38,7 @@ const About = () => {
                   </Fade>
                 </div>
               </div>
-              <div className="col-lg-4">
+              <div className="col l-4 m-12 c-12">
                 <div className="about__img">
                   <img src="./image/about-img1.jpg" alt="" />
                 </div>

@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <>
       <FooterTop className="pt-100 pb-70">
-        <div className="container">
+        <div className="grid wide">
           <div className="row">
-            <div className="col-lg-3 col-md-6">
+            <div className="col l-3 m-6 c-12">
               <div className="single__widget">
                 <div className="logo">
                   <NavLink to="/" className="logo__footer">
@@ -45,7 +45,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6">
+            <div className="col l-3 m-6 c-12">
               <div className="single__widget">
                 <h2>CONTACT US</h2>
 
@@ -79,7 +79,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6">
+            <div className="col l-3 m-6 c-12">
               <div className="single__widget">
                 <h2>ADDITIONAL LINKS</h2>
 
@@ -103,38 +103,38 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6">
+            <div className="col l-3 m-6 c-12">
               <div className="single__widget">
                 <h2>INSTAGRAM</h2>
 
-                <ul className="instagram grid__row">
-                  <li className="column-4">
+                <ul className="instagram row">
+                  <li className="col l-4 c-4">
                     <a href="###">
                       <img src="./image/instagram1.jpg" alt="" />
                     </a>
                   </li>
-                  <li className="column-4">
+                  <li className="col l-4 c-4">
                     <a href="###">
                       <img src="./image/instagram2.jpg" alt="" />
                     </a>
                   </li>
-                  <li className="column-4">
+                  <li className="col l-4 c-4">
                     <a href="###">
                       <img src="./image/instagram3.jpg" alt="" />
                     </a>
                   </li>
 
-                  <li className="column-4">
+                  <li className="col l-4 c-4">
                     <a href="###">
                       <img src="./image/instagram4.jpg" alt="" />
                     </a>
                   </li>
-                  <li className="column-4">
+                  <li className="col l-4 c-4">
                     <a href="###">
                       <img src="./image/instagram5.jpg" alt="" />
                     </a>
                   </li>
-                  <li className="column-4">
+                  <li className="col l-4 c-4">
                     <a href="###">
                       <img src="./image/instagram6.jpg" alt="" />
                     </a>
@@ -147,7 +147,7 @@ const Footer = () => {
       </FooterTop>
 
       <FooterBottom>
-        <div className="container">
+        <div className="grid wide">
           <div className="copy__right__wrap">
             <p>
               Copyright @2021 Vivi. Designed By <a href="###">EnvyTheme</a>

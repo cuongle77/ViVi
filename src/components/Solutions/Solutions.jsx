@@ -11,9 +11,9 @@ const Solutions = () => {
   return (
     <>
       <SolutionsContainer className="ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col l-6 m-12 c-12">
               <div className="what__we__do__content">
                 <Fade left>
                   <span>What we do</span>
@@ -34,7 +34,7 @@ const Solutions = () => {
                   <div className="row">
                     {solutionBrand?.map((item, index) => {
                       return (
-                        <div key={index} className="col-lg-4 col-sm-6 col-md-4">
+                        <div key={index} className="col l-4 mD-4 c-12">
                           <div className="brand">
                             <a href="###">
                               <img src={item.image} alt="" />
@@ -54,13 +54,13 @@ const Solutions = () => {
               </div>
             </div>
 
-            <div className="col-lg-6">
-              <div className="row">
+            <div className="col l-6 m-12 c-12">
+              <div className="row row--custom">
                 {solutionBrandTwo?.map((item, index) => {
                   let addClassMarginTop = index === 0 ? "mt-30" : "";
                   let addClassMarginBottom = index === 3 ? "mt-mince-30" : "";
                   return (
-                    <div key={index} className="col-lg-6 col-md-6">
+                    <div key={index} className="col l-6 m-6 c-12">
                       <Fade bottom>
                         <>
                           <div

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const LatestTrailerContainer = styled.section`
+  overflow: hidden;
+
   .owl-theme .owl-dots {
     margin-top: 0 !important;
     position: absolute;
@@ -113,29 +115,125 @@ export const LatestTrailerContainer = styled.section`
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  @media (min-width: 1024px) and (max-width: 1239px) {
+    .modal-video {
+      .modal-video-body {
+        .modal-video-inner {
+          .modal-video-movie-wrap {
+            width: 90%;
+            margin: 0 auto;
+
+            .modal-video-close-btn {
+              right: 0;
+            }
+          }
+        }
+      }
+    }
 
     .owl-theme .owl-dots {
-      display: none;
+      right: 0px;
+    }
+  }
+
+  @media (min-width: 740px) and (max-width: 1023px) {
+    padding: 50px 0 60px;
+
+    .modal-video {
+      .modal-video-body {
+        .modal-video-inner {
+          .modal-video-movie-wrap {
+            width: 90%;
+            margin: 0 auto;
+
+            .modal-video-close-btn {
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .owl-theme .owl-dots {
+      margin-top: 10px !important;
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      top: 100%;
+      right: 50%;
+      transform: translate(50%, 0%);
     }
 
     .latest__trailer__content {
       text-align: center;
+
       h2 {
         font-size: 2.5rem;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
 
       p {
-        margin-left: 0;
         font-size: 1.6rem;
-        line-height: 2.2rem;
-        opacity: 0.6;
+        margin-left: 0px;
+        margin-bottom: 20px;
 
         &::before {
           display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 739px) {
+    padding: 40px 0 50px;
+
+    .modal-video {
+      .modal-video-body {
+        .modal-video-inner {
+          .modal-video-movie-wrap {
+            width: 90%;
+            margin: 0 auto;
+
+            .modal-video-close-btn {
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .owl-theme .owl-dots {
+      margin-top: 10px !important;
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      top: 100%;
+      right: 50%;
+      transform: translate(50%, 0%);
+    }
+
+    .row--custom {
+      padding: 0 12px;
+
+      .latest__trailer__content {
+        text-align: center;
+        span {
+          font-size: 1.4rem;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 1.4rem;
+          margin-left: 0px;
+          margin-bottom: 20px;
+
+          &::before {
+            display: none;
+          }
         }
       }
     }

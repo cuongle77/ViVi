@@ -84,31 +84,27 @@ export const TestimonialContainer = styled.section`
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  @media (max-width: 739px) {
+    padding: 30px 0;
 
     .testimonial__item {
+      padding: 0 12px;
       i {
         font-size: 5rem;
       }
 
       p {
         font-size: 1.8rem;
-        line-height: 3rem;
+        word-spacing: 0px;
+        line-height: 1.6;
       }
 
       h3 {
-        font-size: 2.2rem;
-        word-spacing: 3px;
-        line-height: 3rem;
-        font-weight: 800;
-        text-transform: uppercase;
+        font-size: 2rem;
       }
 
       span {
-        display: block;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
     }
   }

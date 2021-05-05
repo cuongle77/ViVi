@@ -33,7 +33,7 @@ const HeroSlider = () => {
               >
                 <div className="d__table">
                   <div className="d__table__cell">
-                    <div className="container">
+                    <div className="grid wide">
                       <div className="hero__slider__text">
                         <Animated className="fadeInUp" animationInDelay={1000}>
                           <h1>{item.title}</h1>
@@ -44,7 +44,7 @@ const HeroSlider = () => {
                         </Animated>
 
                         <Animated className="fadeInUp" animationInDelay={3000}>
-                          <div className="slider__btn ">
+                          <div className="slider__btn">
                             <a href="###" className="default__btn">
                               View more
                             </a>

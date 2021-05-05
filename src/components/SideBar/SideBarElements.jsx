@@ -12,7 +12,7 @@ export const SideBarContainer = styled.div`
   transition: all 0.25s linear;
   z-index: 1000;
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  @media (max-width: 1023px) {
     display: none;
   }
 `;

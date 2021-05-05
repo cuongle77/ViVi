@@ -3,8 +3,9 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { MainNav, Nav } from "./NavbarElements";
 
-function Navbar({ handleOpenSideBar }, props) {
+function Navbar({ handleOpenSideBar, Isshow }, props) {
   const [scroll, setScroll] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const handleScroll = () => {
     const lastScroll = window.scrollY;
     if (lastScroll > 250) {
@@ -15,6 +16,16 @@ function Navbar({ handleOpenSideBar }, props) {
   };
   window.addEventListener("scroll", handleScroll);
 
+  let activeClass = isOpen ? "active" : "";
+  let hideClass = isOpen ? "hide" : "";
+  const handleMenuMoblie = () => {
+    if (isOpen) {
+      setOpen(false);
+    } else {
+      setOpen(true);
+    }
+  };
+
   const { cartStore } = useSelector((state) => state.cartReducer);
   const totalPrdoductCart = cartStore.reduce((sum, item) => {
     return (sum += item.quantity);
@@ -23,17 +34,16 @@ function Navbar({ handleOpenSideBar }, props) {
   return (
     <>
       <MainNav scroll={scroll}>
-        <div className="container-fluid nav__area">
+        <div className="grid nav__area">
           <Nav>
             <NavLink to="/" className="logo__brand">
               <img src="./image/logo.png" alt="" className="log__brand-img" />
             </NavLink>
 
-            <ul className="nav__menu">
+            <ul className={`nav__menu ${activeClass}`}>
               <li className="nav__menu__item">
                 <NavLink to="/" className="menu__item__link">
                   HOME
-                  {/* <i className="fas fa-angle-down"></i> */}
                 </NavLink>
               </li>
 
@@ -167,12 +177,15 @@ function Navbar({ handleOpenSideBar }, props) {
             </ul>
 
             <div className="other__option">
-              <form action="" className="search__form">
+              <form
+                action=""
+                className={`search__form ${activeClass} ${hideClass}`}
+              >
                 <input type="text" placeholder="SEARCH" />
                 <i className="fas fa-search"></i>
               </form>
 
-              <div className="nav__cart">
+              <div className={`nav__cart ${activeClass}`}>
                 <NavLink to="/cart" className="nav__cart__link">
                   <i className="fas fa-shopping-cart"></i>
 
@@ -180,12 +193,26 @@ function Navbar({ handleOpenSideBar }, props) {
                 </NavLink>
               </div>
 
-              <div className="nav__mobile-icon">
+              <div className="nav__icon__bars">
                 <button
-                  className="nav__mobile-icon__btn"
+                  className="nav__icon__bars__sidebar"
                   onClick={handleOpenSideBar}
                 >
                   <i className="fas fa-bars"></i>
+                </button>
+
+                <button
+                  className={`nav__icon__bars__mobile ${activeClass}`}
+                  onClick={handleMenuMoblie}
+                >
+                  <i className="fas fa-bars"></i>
+                </button>
+
+                <button
+                  className={`nav__icon__bars__mobile__close ${activeClass}`}
+                  onClick={handleMenuMoblie}
+                >
+                  <i className="fas fa-times"></i>
                 </button>
               </div>
             </div>

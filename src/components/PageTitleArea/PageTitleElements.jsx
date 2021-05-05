@@ -11,4 +11,14 @@ export const MainPageTitle = styled.div`
   background-size: cover;
   height: 100%;
   z-index: 1;
+
+  @media (min-width: 740px) and (max-width: 1023px) {
+    padding-top: 150px;
+    padding-bottom: 120px;
+  }
+
+  @media (max-width: 739px) {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
 `;

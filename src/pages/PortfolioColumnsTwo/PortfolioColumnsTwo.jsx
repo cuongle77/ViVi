@@ -22,7 +22,7 @@ const PortfolioColumnsTwo = () => {
       />
 
       <PageTitleArea className="portfolio__bg">
-        <div className="container">
+        <div className="grid wide">
           <div className="page__title__content">
             <h2>Portfolio Columns Two</h2>
             <ul>
@@ -36,11 +36,11 @@ const PortfolioColumnsTwo = () => {
       </PageTitleArea>
 
       <section className="portfolio__area ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <div className="row">
             {portfolioColumnsStore.map((item, index) => {
               return (
-                <div key={index} className="col-lg-6 col-md-6">
+                <div key={index} className="col l-6 m-6 c-12">
                   <div className="single__portfolio">
                     <div
                       className="portfolio__image"
@@ -50,7 +50,7 @@ const PortfolioColumnsTwo = () => {
                     >
                       <div className="price__wrap">
                         <NavLink to="#playVideo" onClick={() => setOpen(true)}>
-                          <i class="far fa-play-circle"></i>
+                          <i className="far fa-play-circle"></i>
                         </NavLink>
                       </div>
                     </div>
@@ -65,12 +65,11 @@ const PortfolioColumnsTwo = () => {
                 </div>
               );
             })}
-
-            <div className="col-12 text-center">
-              <a href="###" className="default__btn">
-                View More
-              </a>
-            </div>
+          </div>
+          <div className="portfolio__btn" style={{ textAlign: "center" }}>
+            <a href="###" className="default__btn">
+              View More
+            </a>
           </div>
         </div>
       </section>

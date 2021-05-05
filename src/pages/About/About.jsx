@@ -12,10 +12,30 @@ const About = () => {
   const { partnerStoreAbout } = useSelector((state) => state.partnerReducer);
   const { teamStore } = useSelector((state) => state.teamReducer);
   const { productionStore } = useSelector((state) => state.aboutPageReducer);
+
+  const setttings = {
+    responsive: {
+      0: {
+        items: 3,
+      },
+
+      520: {
+        items: 4,
+      },
+
+      768: {
+        items: 4,
+      },
+
+      1024: {
+        items: 6,
+      },
+    },
+  };
   return (
     <>
       <PageTitleArea className="bg__about">
-        <div className="container">
+        <div className="grid wide">
           <div className="page__title__content">
             <h2>About</h2>
             <ul>
@@ -29,9 +49,9 @@ const About = () => {
       </PageTitleArea>
 
       <section className="about__area__two ptb-100">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
+        <div className="grid wide">
+          <div className="row" style={{ alignItems: "center" }}>
+            <div className="col l-6 m-12 c-12">
               <div className="about__content">
                 <span>vivi Bio</span>
                 <h2>We Are A Creative Video Production Company</h2>
@@ -53,24 +73,25 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6">
+
+            <div className="col l-6 m-12 c-12">
               <div className="row">
-                <div className="col-lg-6 col-sm-6 p-0">
+                <div className="col l-6 m-6 c-12">
                   <div className="about__grid__img">
                     <img src="./image/about-grid1.jpg" alt="" />
                   </div>
                 </div>
-                <div className="col-lg-6 col-sm-6 p-0">
+                <div className="col l-6 m-6 c-12">
                   <div className="about__grid__img">
                     <img src="./image/about-grid2.jpg" alt="" />
                   </div>
                 </div>
-                <div className="col-lg-6 col-sm-6 p-0">
-                  <div className="about__grid__img  mb-0">
+                <div className="col l-6 m-6 c-12">
+                  <div className="about__grid__img">
                     <img src="./image/about-grid3.jpg" alt="" />
                   </div>
                 </div>
-                <div className="col-lg-6 col-sm-6 p-0 ">
+                <div className="col l-6 m-6 c-12">
                   <div className="about__grid__img mb-0">
                     <img src="./image/about-grid4.jpg" alt="" />
                   </div>
@@ -82,27 +103,27 @@ const About = () => {
       </section>
 
       <section className="counter__area pb-70">
-        <div className="container">
+        <div className="grid wide">
           <div className="row">
-            <div className="col-lg-3 col-sm-6">
+            <div className="col l-3 m-6 c-12">
               <div className="single__counter">
                 <h3>135</h3>
                 <p>Brand Videos</p>
               </div>
             </div>
-            <div className="col-lg-3 col-sm-6">
+            <div className="col l-3 m-6 c-12">
               <div className="single__counter">
                 <h3>123</h3>
                 <p>Creative Filmmakers</p>
               </div>
             </div>
-            <div className="col-lg-3 col-sm-6">
+            <div className="col l-3 m-6 c-12">
               <div className="single__counter">
                 <h3>3475+</h3>
                 <p>Happy Users</p>
               </div>
             </div>
-            <div className="col-lg-3 col-sm-6">
+            <div className="col l-3 m-6 c-12">
               <div className="single__counter">
                 <h3>10</h3>
                 <p>Awards Win</p>
@@ -113,7 +134,7 @@ const About = () => {
       </section>
 
       <section className="our__production__area bg__color pt-100 pb-70">
-        <div className="container">
+        <div className="grid wide">
           <div className="section__title">
             <span>Our Production</span>
             <h2>Services We Provide</h2>
@@ -136,7 +157,7 @@ const About = () => {
       </section>
 
       <section className="team__area pt-100 pb-70">
-        <div className="container">
+        <div className="grid wide">
           <div className="section__title">
             <span>FilmMakers</span>
             <h2>Meet The Team</h2>
@@ -145,7 +166,7 @@ const About = () => {
           <div className="row">
             {teamStore.splice(0, 3)?.map((item, index) => {
               return (
-                <div key={index} className="col-lg-4 col-sm-6">
+                <div key={index} className="col l-4 m-6 c-12">
                   <div className="single__team">
                     <div className="team__img">
                       <img src={item.url} alt={item.name} />
@@ -185,24 +206,24 @@ const About = () => {
       </div>
 
       <section className="collaborate__area ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <div className="section__title ">
             <span>Collaborate</span>
             <h2>Work With Us</h2>
           </div>
 
-          <div className="row align-items-center">
-            <div className="col-lg-6">
+          <div className="row" style={{ alignItems: "center" }}>
+            <div className="col l-6 m-6 c-12">
               <div className="collaborate__img">
                 <img src="./image/collaborate-img.jpg" alt="" />
               </div>
             </div>
 
-            <div className="col-lg-6">
+            <div className="col l-6 m-6 c-12">
               <div className="collaborate__form">
                 <form>
                   <div className="row">
-                    <div className="col-12 col-sm-6">
+                    <div className="col l-12 c-6">
                       <div className="form-group">
                         <label>Name</label>
                         <input
@@ -214,7 +235,7 @@ const About = () => {
                       </div>
                     </div>
 
-                    <div className="col-12 col-sm-6">
+                    <div className="col l-12 c-6">
                       <div className="form-group">
                         <label>Email Address</label>
                         <input
@@ -226,7 +247,7 @@ const About = () => {
                       </div>
                     </div>
 
-                    <div className="col-12 col-sm-6">
+                    <div className="col l-12 c-6">
                       <div className="form-group">
                         <label>Company</label>
                         <input
@@ -238,7 +259,7 @@ const About = () => {
                       </div>
                     </div>
 
-                    <div className="col-12 col-sm-6">
+                    <div className="col l-12 c-6">
                       <div className="form-group">
                         <label>Title</label>
                         <input
@@ -286,13 +307,14 @@ const About = () => {
       </section>
 
       <section className="partner__wrap bg-color ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <OwlCarousel
             className="owl-theme"
-            autoplay
+            // autoplay
             smartSpeed={1000}
             autoplayHoverPause
-            items={6}
+            responsiveClass={true}
+            responsive={setttings.responsive}
             loop
             margin={30}
           >

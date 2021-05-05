@@ -187,6 +187,52 @@ export const FooterTop = styled.footer`
       }
     }
   }
+
+  @media (max-width: 739px) {
+    padding: 0px 12px 40px;
+
+    .single__widget {
+      padding-top: 50px;
+
+      h3 {
+        margin: 20px 0;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      form {
+        input {
+          font-size: 1.4rem;
+        }
+      }
+
+      .contact__social {
+        margin-top: 20px;
+        a {
+          margin-right: 10px;
+          i {
+            font-size: 1.5rem;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+          }
+        }
+      }
+
+      .instagram {
+        li {
+          a {
+            img {
+              width: 85%;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const FooterBottom = styled.footer`
@@ -212,6 +258,18 @@ export const FooterBottom = styled.footer`
 
         &:hover {
           color: #fff;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 739px) {
+    .copy__right__wrap {
+      p {
+        font-size: 1.4rem;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+        a {
         }
       }
     }

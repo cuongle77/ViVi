@@ -3,7 +3,6 @@ import { BackToTopContainer } from "./BackToTopElements";
 
 const BackToTop = () => {
   let [toTop, setToTop] = useState(false);
-
   const handleBtnHidden = () => {
     if (window.pageYOffset === 0) {
       setToTop(true);
@@ -11,6 +10,7 @@ const BackToTop = () => {
       setToTop(false);
     }
   };
+  window.addEventListener("DOMContentLoaded", handleBtnHidden);
   window.addEventListener("scroll", handleBtnHidden);
 
   const scrollToTop = () => {

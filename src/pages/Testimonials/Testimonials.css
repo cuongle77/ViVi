@@ -131,3 +131,23 @@
 .pagination__area .page__numbers:hover {
   color: #272b2b;
 }
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .testimonial__page__area {
+    padding: 50px 0 !important;
+  }
+
+  .page__title__content h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 739px) {
+  .testimonial__page__area {
+    padding: 30px 12px !important;
+  }
+
+  .page__title__content h2 {
+    font-size: 2rem;
+  }
+}

@@ -8,7 +8,7 @@ const Testimonial = () => {
   return (
     <>
       <TestimonialContainer className="ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <OwlCarousel
             className="owl-theme"
             items="1"

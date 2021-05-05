@@ -18,7 +18,6 @@ import VideoCreated from "../../components/VideoCreated";
 
 function HomePages() {
   let [isOpen, setIsOpen] = useState(false);
-
   const handleOpenSideBar = () => {
     if (isOpen) {
       setIsOpen(false);
@@ -29,7 +28,7 @@ function HomePages() {
 
   return (
     <>
-      <Navbar handleOpenSideBar={handleOpenSideBar} />
+      <Navbar handleOpenSideBar={handleOpenSideBar} isOpen={isOpen} />
       <SideBar isOpen={isOpen} handleOpenSideBar={handleOpenSideBar} />
       <HeroSlider />
       <About />

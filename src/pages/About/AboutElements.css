@@ -182,11 +182,12 @@
 }
 
 .what__we__do__item {
-  border: none;
+  border: 1px solid #ddd;
   margin-bottom: 0;
   text-align: center;
   padding: 20px;
   transition: all 0.5s;
+  margin-bottom: 30px;
 }
 
 .what__we__do__item:hover {
@@ -352,6 +353,10 @@
   padding: 17px 30px;
 }
 
+.partner__wrap .owl-dots {
+  display: none;
+}
+
 .partner__item {
   text-align: center;
 }
@@ -364,4 +369,159 @@
 .partner__item img {
   width: unset;
   margin: auto;
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .about__area__two {
+    padding: 50px 0 !important;
+    text-align: center;
+  }
+
+  .about__content h3,
+  .about__content p {
+    padding-left: 0;
+  }
+
+  .about__content h2 {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+  }
+
+  .about__content h3 {
+    margin-top: 20px !important;
+  }
+
+  .about__content p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .about__content h3::before {
+    display: none;
+  }
+
+  .about__grid__img {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  .about__grid__img img {
+    width: 100%;
+  }
+
+  .counter__area {
+    padding-bottom: 50px !important;
+  }
+
+  .our__production__area,
+  .team__area,
+  .collaborate__area,
+  .partner__wrap {
+    padding: 50px 0 !important;
+  }
+
+  .section__title h2 {
+    font-size: 2.8rem;
+  }
+
+  .team__area .section__title {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 739px) {
+  .about__area__two {
+    padding: 30px 12px !important;
+  }
+
+  .about__content {
+    text-align: center;
+  }
+
+  .about__content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .about__content h3 {
+    font-size: 1.5rem;
+    margin-top: 20px !important;
+  }
+
+  .about__content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .about__content h3,
+  .about__content p {
+    padding-left: 0px;
+  }
+
+  .about__content h3::before {
+    display: none;
+  }
+
+  .about__grid__img {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .about__grid__img img {
+    width: 100%;
+  }
+
+  .counter__area {
+    padding: 30px 12px !important;
+  }
+
+  .our__production__area {
+    padding: 30px 12px !important;
+  }
+
+  .section__title {
+    margin-bottom: 20px;
+  }
+
+  .section__title span {
+    font-size: 1.2rem;
+  }
+
+  .section__title h2 {
+    font-size: 2rem;
+  }
+
+  .team__area {
+    padding: 30px 12px !important;
+  }
+
+  .single__team .team__content h3 {
+    font-size: 1.8rem;
+  }
+
+  .single__team .team__content span {
+    font-size: 1.2rem;
+  }
+
+  .collaborate__area {
+    padding: 30px 12px !important;
+  }
+
+  .collaborate__img {
+    padding-bottom: 20px;
+  }
+
+  .collaborate__form form button.default__btn {
+    font-size: 1.2rem;
+    padding: 1.5rem 2.2rem;
+  }
+
+  .partner__wrap {
+    padding: 30px 12px !important;
+  }
+
+  .partner__item a > img {
+    width: 85% !important;
+  }
 }

@@ -9,7 +9,7 @@ const Testimonials = () => {
   return (
     <>
       <PageTitleArea className="bg__testimonials">
-        <div className="container">
+        <div className="grid wide">
           <div className="page__title__content">
             <h2>Testimonials</h2>
             <ul>
@@ -23,11 +23,11 @@ const Testimonials = () => {
       </PageTitleArea>
 
       <section className="testimonial__page__area ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <div className="row">
             {testimonialStore?.map((item, index) => {
               return (
-                <div key={index} className="col-lg-6">
+                <div key={index} className="col l-6 m-12 c-12">
                   <div className="testimonial__text">
                     <img src={item.url} alt={item.name} />
                     <i className="fas fa-quote-right"></i>
@@ -39,7 +39,7 @@ const Testimonials = () => {
               );
             })}
 
-            <div className="col-lg-12 col-md-6">
+            <div className="col l-12 m-12 c-12">
               <div className="pagination__area text-center">
                 <a href="###" className="prev page__numbers">
                   <i className="fas fa-chevron-left"></i>

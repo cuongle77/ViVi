@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const MainNav = styled.div`
   position: ${({ scroll }) => (scroll ? "fixed" : "absolute")};
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 999;
   background: #fff;
@@ -12,10 +14,22 @@ export const MainNav = styled.div`
     padding-right: 50px;
   }
 
-  @media only screen and (max-width: 991px) {
+  @media (min-width: 1024px) and (max-width: 1239px) {
     .nav__area {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  @media (min-width: 740px) and (max-width: 1023px) {
+    .nav__area {
+      padding: 10px 50px;
+    }
+  }
+
+  @media (max-width: 739px) {
+    .nav__area {
+      padding: 5px 20px;
     }
   }
 `;
@@ -237,15 +251,45 @@ export const Nav = styled.nav`
       }
     }
 
-    .nav__mobile-icon {
+    .nav__icon__bars {
       margin-left: 30px;
       cursor: pointer;
 
-      .nav__mobile-icon__btn {
+      &__sidebar {
         display: inline-block;
         color: #3b3d3d;
         border: none;
         outline: none;
+        background-color: unset;
+
+        i {
+          line-height: 2.5rem;
+          font-size: 2.5rem;
+        }
+      }
+
+      &__mobile {
+        display: inline-block;
+        color: #3b3d3d;
+        border: none;
+        outline: none;
+        display: none;
+        background-color: unset;
+
+        i {
+          line-height: 2.5rem;
+          font-size: 2.5rem;
+        }
+      }
+
+      &__mobile__close {
+        display: inline-block;
+        color: #3b3d3d;
+        border: none;
+        outline: none;
+        display: none;
+        background-color: unset;
+
         i {
           line-height: 2.5rem;
           font-size: 2.5rem;
@@ -254,27 +298,120 @@ export const Nav = styled.nav`
     }
   }
 
-  @media only screen and (max-width: 991px) {
-    .nav__menu,
-    .search__form,
-    .nav__cart {
-      display: none;
+  @media (min-width: 1024px) and (max-width: 1239px) {
+    .nav__menu {
+      .nav__menu__item {
+        .menu__item__link {
+          margin: 0 15px;
+        }
+      }
     }
 
     .other__option {
-      .nav__mobile-icon {
-        margin-left: 0;
-        .nav__mobile-icon__btn {
-          i {
-            line-height: 3.5rem;
-            font-size: 3.5rem;
-            padding: 5px;
+      .search__form {
+        width: 120px;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .nav__menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 15px 50px;
+      box-shadow: 0px 10px 45px -40px #000;
+      display: none;
+
+      .nav__menu__item {
+        display: block;
+        padding: 10px 0;
+
+        .menu__item__link {
+          margin: 0;
+        }
+
+        &:hover {
+          .nav__sub__menu {
+            top: 100%;
           }
+        }
+      }
+    }
+
+    .nav__menu.active {
+      display: block;
+    }
+
+    .other__option {
+      .search__form {
+        display: none;
+      }
+
+      .search__form.active {
+        display: block;
+      }
+
+      .nav__cart {
+        display: none;
+      }
+
+      .nav__cart.active {
+        display: block;
+      }
+
+      .nav__icon__bars {
+        &__sidebar {
+          display: none;
+        }
+
+        &__mobile {
+          display: block;
+        }
+
+        &__mobile.active {
+          display: none;
+        }
+
+        &__mobile__close {
+          display: none;
+        }
+
+        &__mobile__close.active {
+          display: block;
         }
       }
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  @media (max-width: 739px) {
+    .nav__menu {
+      padding: 0 20px;
+      .nav__menu__item {
+        .menu__item__link {
+          font-size: 1.3rem;
+        }
+        .nav__sub__menu {
+          width: 250px;
+          .sub__menu_item {
+            .nav__sub__menu {
+              top: 100%;
+              left: 5%;
+            }
+          }
+        }
+      }
+    }
+
+    .other__option {
+      .search__form {
+      }
+
+      .search__form.hide {
+        display: none;
+      }
+    }
   }
 `;

@@ -7,6 +7,30 @@ import { useSelector } from "react-redux";
 
 const Team = () => {
   const { teamStore } = useSelector((state) => state.teamReducer);
+
+  const settings = {
+    responsive: {
+      0: {
+        items: 1,
+      },
+
+      414: {
+        items: 2,
+      },
+
+      768: {
+        items: 3,
+      },
+
+      1024: {
+        items: 4,
+      },
+
+      1280: {
+        items: 5,
+      },
+    },
+  };
   return (
     <>
       <TeamContainer className="ptb-100">
@@ -17,10 +41,11 @@ const Team = () => {
 
         <OwlCarousel
           className="owl-theme"
-          autoplay
+          // autoplay
           autoplayHoverPause
           smartSpeed={1000}
-          items={5}
+          responsiveClass={true}
+          responsive={settings.responsive}
           loop
         >
           {teamStore?.map((item, index) => {
@@ -28,7 +53,7 @@ const Team = () => {
               <div key={index} className="single__team">
                 <div className="team__img">
                   <img src={item.url} alt={item.name} />
-                  <ul className="social">
+                  <ul className="team__img__social">
                     <li>
                       <a href="###">
                         <i className="fab fa-twitter"></i>

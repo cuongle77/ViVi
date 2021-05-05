@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SolutionsContainer = styled.section`
   background-color: #fff;
+  overflow: hidden;
 
   .what__we__do__content {
     span {
@@ -99,23 +100,37 @@ export const SolutionsContainer = styled.section`
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    .what__we__do__content {
-      text-align: center;
-      margin-bottom: 30px;
+  @media (min-width: 1024px) and (max-width: 1239px) {
+    .what__we__do__item {
+      i {
+      }
 
-      h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
+      h3 {
+        font-size: 1.8rem;
       }
 
       p {
-        margin-left: 0;
-        font-size: 1.5rem;
-        line-height: 2.2rem;
-        opacity: 0.6;
+      }
+    }
+  }
+
+  @media (min-width: 740px) and (max-width: 1023px) {
+    padding: 50px 0;
+
+    .what__we__do__content {
+      text-align: center;
+
+      span {
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+      }
+
+      p {
+        margin-left: 0px;
         margin-bottom: 30px;
 
         &::before {
@@ -128,15 +143,7 @@ export const SolutionsContainer = styled.section`
         margin-bottom: 30px;
         .brand {
           a {
-            display: inline-block;
-            text-decoration: none;
-            transition: all 0.5s;
-
-            &:hover {
-              transform: translateY(-6px);
-            }
             img {
-              display: block;
               width: 100%;
             }
           }
@@ -145,11 +152,85 @@ export const SolutionsContainer = styled.section`
 
       .default__btn {
         margin-left: 0px;
+        margin-bottom: 30px;
       }
     }
 
     .what__we__do__item {
+      margin-bottom: 16px;
+    }
+
+    .mt-30 {
       margin-top: 0;
+    }
+
+    .mt-mince-30 {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 739px) {
+    padding: 30px 0;
+
+    .what__we__do__content {
+      text-align: center;
+      padding: 12px;
+
+      span {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-left: 0px;
+        margin-bottom: 20px;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      .brand__wrap {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        .brand {
+          margin-bottom: 30px;
+          a {
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .default__btn {
+        font-size: 1.4rem;
+        margin-left: 0px;
+        margin-bottom: 20px;
+        padding: 1.2rem 2rem;
+      }
+    }
+
+    .row--custom {
+      padding: 0 12px;
+
+      .what__we__do__item {
+        margin-bottom: 16px;
+      }
+
+      .mt-30 {
+        margin-top: 0;
+      }
+
+      .mt-mince-30 {
+        margin-top: 0;
+      }
     }
   }
 `;

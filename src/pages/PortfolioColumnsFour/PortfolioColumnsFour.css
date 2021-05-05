@@ -67,3 +67,9 @@
 .page__title__content ul li.active {
   color: #e2a850;
 }
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .single__portfolio .portfolio__content h3 {
+    font-size: 1.5rem;
+  }
+}

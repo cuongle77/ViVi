@@ -7,7 +7,7 @@ const Blog = () => {
   return (
     <>
       <BlogContainer className="ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <div className="section__title">
             <span>News Feeds</span>
             <h2>Get The Latest News</h2>
@@ -16,7 +16,7 @@ const Blog = () => {
           <div className="row">
             {blogStore?.map((item, index) => {
               return (
-                <div key={index} className="col-lg-4 col-md-6">
+                <div key={index} className="col l-4 m-6 c-12">
                   <div className="single__blog">
                     <a href="###" className="blog__img">
                       <img src={item.url} alt={item.blogName} />

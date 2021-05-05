@@ -21,6 +21,10 @@ export const PartnerContainer = styled.section`
     z-index: -1;
   }
 
+  .owl-dots {
+    display: none;
+  }
+
   .partner__item {
     text-align: center;
     a {
@@ -29,6 +33,22 @@ export const PartnerContainer = styled.section`
       img {
         width: unset;
         margin: auto;
+      }
+    }
+  }
+
+  @media (min-width: 740px) and (max-width: 1023px) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: 739px) {
+    padding: 30px 0;
+
+    .partner__item {
+      a {
+        img {
+          max-width: 80%;
+        }
       }
     }
   }

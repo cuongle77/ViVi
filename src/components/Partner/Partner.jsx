@@ -7,18 +7,39 @@ import { useSelector } from "react-redux";
 
 const Partner = () => {
   const { partnerStoreHome } = useSelector((state) => state.partnerReducer);
+
+  const settings = {
+    responsvie: {
+      0: {
+        items: 3,
+      },
+
+      414: {
+        items: 3,
+      },
+
+      540: {
+        items: 4,
+      },
+
+      1024: {
+        items: 6,
+      },
+    },
+  };
   return (
     <>
       <PartnerContainer className="ptb-100">
-        <div className="container">
+        <div className="grid wide">
           <OwlCarousel
             className="owl-theme"
             autoplay
             smartSpeed={1000}
             autoplayHoverPause
-            items={6}
+            responsiveClass={true}
+            responsive={settings.responsvie}
             loop
-            margin={30}
+            margin={20}
           >
             {partnerStoreHome?.map((item, index) => {
               return (
