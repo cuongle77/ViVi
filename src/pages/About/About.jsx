@@ -310,7 +310,7 @@ const About = () => {
         <div className="grid wide">
           <OwlCarousel
             className="owl-theme"
-            // autoplay
+            autoplay
             smartSpeed={1000}
             autoplayHoverPause
             responsiveClass={true}
