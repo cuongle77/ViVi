@@ -41,7 +41,7 @@ const Team = () => {
 
         <OwlCarousel
           className="owl-theme"
-          // autoplay
+          autoplay
           autoplayHoverPause
           smartSpeed={1000}
           responsiveClass={true}
