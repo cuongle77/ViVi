@@ -36,7 +36,6 @@ export const cartReducer = (state = stateDefault, action) => {
       } else if (cartStoreUpdate[index].quantity > 1) {
         cartStoreUpdate[index].quantity--;
       }
-      console.log(action.increase);
 
       return { ...state };
     }
