@@ -31,7 +31,6 @@ const stateDefault = {
 export const teamReducer = (state = stateDefault, action) => {
   switch (action.type) {
     case "TEAM_DATA": {
-      console.log(action);
       state.teamStore = [...action.teamStore];
       return { ...state };
     }

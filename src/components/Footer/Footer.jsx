@@ -150,7 +150,7 @@ const Footer = () => {
         <div className="grid wide">
           <div className="copy__right__wrap">
             <p>
-              Copyright @2021 Vivi. Designed By <a href="###">EnvyTheme</a>
+              Copyright @2022 Vivi. Designed By <a href="###">Cruz Lee</a>
             </p>
           </div>
         </div>

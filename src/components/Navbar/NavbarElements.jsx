@@ -183,36 +183,116 @@ export const Nav = styled.nav`
     align-items: center;
     justify-content: space-between;
 
-    .search__form {
+    .nav-search {
       position: relative;
-      width: 250px;
-      input {
-        display: inline-block;
-        border-top: none;
-        border-left: none;
-        border-right: none;
+
+      .search__form {
+        display: flex;
+        align-items: center;
+        width: 250px;
         border-bottom: 1px solid #cfcfcf;
-        padding: 8px 0 8px 0;
-        font-size: 1.5rem;
-        color: #676a6a;
-        font-weight: 700;
-        text-transform: uppercase;
-        outline: none;
-        width: 100%;
-        transition: border 0.25s linear;
-        background: transparent;
-        &:focus {
-          border-bottom: 1px solid #302f2f;
+
+        &:focus-within {
+            border-bottom: 1px solid #302f2f;
+          }
+
+        input {
+          border: none;
+          padding: 8px 0 8px 0;
+          font-size: 1.5rem;
+          color: #676a6a;
+          font-weight: 700;
+          text-transform: uppercase;
+          outline: none;
+          width: 100%;
+          transition: border 0.25s linear;
+          background: transparent;
+          margin-right: 8px;
+        }
+
+        i {
+          font-size: 1.8rem;
+          margin-left: 20px;
         }
       }
 
-      i {
-        display: inline-block;
+      .list-results {
+        width: 100%;
+        background: #fff;
         position: absolute;
-        font-size: 1.8rem;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        left: 0;
+        top: calc(100% + 6px);
+        z-index: 1000;
+        padding: 16px 0;
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.2);
+
+        .item-found {
+          display: flex;
+          align-items: center;
+          padding: 4px 8px;
+          margin-bottom: 1px;
+          cursor: pointer;
+
+          &:hover {
+            background: #f2f2f2;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .img {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .content {
+            display: flex;
+            align-items: center;
+            flex: 1;
+
+            .text {
+              h4 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 0;
+              }
+
+              p {
+                margin-bottom: 0;
+              }
+            }
+
+            .price {
+              margin-left: 8px;
+              font-weight: bold;
+              color: red;
+            }
+
+          }
+
+          .cart > .default__btn {
+            padding: 0;
+            border: none;
+            background: transparent;
+            outline: none;
+
+            i {
+              color: #999;
+              &:hover {
+                color: #333;
+              }
+            }
+
+          }
+        }
       }
     }
 

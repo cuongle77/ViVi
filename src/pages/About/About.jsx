@@ -32,6 +32,7 @@ const About = () => {
       },
     },
   };
+
   return (
     <>
       <PageTitleArea className="bg__about">

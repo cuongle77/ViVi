@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const BackToTopContainer = styled.div`
   position: fixed;
   bottom: 7%;
-  right: ${({ toTop }) => (toTop ? "-5%" : "3%")};
+  right: ${({ show }) => (show ? "3%" : "-5%")};
   background-color: #272b2b;
-  z-index: 1000;
+  z-index: 999;
   transition: all 0.5s;
   cursor: pointer;
-  opacity: ${({ toTop }) => (toTop ? "0" : "1")};
-  visibility: ${({ toTop }) => (toTop ? "hidden" : "visible")};
+  opacity: ${({ show }) => (show ? "1" : "0")};
+  visibility: ${({ show }) => (show ? "visible" : "hidden")};
   i {
     display: block;
     font-size: 2.5rem;

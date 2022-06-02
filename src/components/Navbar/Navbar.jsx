@@ -1,35 +1,108 @@
 import React, { useState } from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+
+// import { ReactComponent as CloseIcon } from "../../assets/svg/close.svg";
+import useDebounce from "../../customHooks/useDebounce";
+import useOnClickOutside from "../../customHooks/useOnClickOutSide";
 import { MainNav, Nav } from "./NavbarElements";
 
 function Navbar({ handleOpenSideBar, Isshow }, props) {
+  const { exclusiveHopStore } = useSelector(
+    (state) => state.exclusiveHopReducer
+  );
+  const { cartStore } = useSelector((state) => state.cartReducer);
+
+  const dispatch = useDispatch();
+
+  const ref = useRef();
+
   const [scroll, setScroll] = useState(false);
   const [isOpen, setOpen] = useState(false);
-  const handleScroll = () => {
-    const lastScroll = window.scrollY;
-    if (lastScroll > 250) {
-      setScroll(true);
-    } else {
-      setScroll(false);
-    }
-  };
-  window.addEventListener("scroll", handleScroll);
+  const [listProducts, setListProducts] = useState([]);
+  const [valueSearch, setValueSearch] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const timeDelay = 500;
+
+  const debounced = useDebounce(valueSearch, timeDelay);
 
   let activeClass = isOpen ? "active" : "";
   let hideClass = isOpen ? "hide" : "";
-  const handleMenuMoblie = () => {
-    if (isOpen) {
-      setOpen(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const lastScroll = window.scrollY;
+      if (lastScroll > 250) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scroll]);
+
+  useEffect(() => {
+    const timeLoading = setTimeout(() => {
+      setLoading(false)
+    }, timeDelay);
+
+
+    return () => clearTimeout(timeLoading)
+  }, [debounced]);
+
+  useEffect(() => {
+    if (!exclusiveHopStore) return;
+    if (debounced) {
+      const matches = [...exclusiveHopStore].filter((item) => {
+        const regex = new RegExp(`${debounced}`, 'gi');
+        return item.name.match(regex) || item.director.match(regex) || item.release.match(regex);
+      });
+      setLoading(true);
+      setListProducts(matches);
     } else {
-      setOpen(true);
+      setListProducts([]);
     }
+  }, [exclusiveHopStore, debounced]);
+
+  useOnClickOutside(ref, () => {
+    setListProducts([]);
+    setValueSearch('');
+  })
+
+  const handleChangeValue = (e) => {
+    const valueSearch = e.target.value;
+    if (!valueSearch.startsWith(' ')) {
+      setValueSearch(valueSearch)
+    }
+  }
+
+  const handleMenuMoblie = () => {
+    setOpen(!isOpen);
   };
 
-  const { cartStore } = useSelector((state) => state.cartReducer);
-  const totalPrdoductCart = cartStore.reduce((sum, item) => {
-    return (sum += item.quantity);
-  }, 0);
+  const handleAddProduct = (item) => {
+    const itemUpdate = { ...item, quantity: 1 };
+    const action = {
+      type: "ADD_CART",
+      item: itemUpdate,
+    };
+
+    dispatch(action);
+  };
+
+  const totalPrdoductCart = cartStore.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
 
   return (
     <>
@@ -177,13 +250,53 @@ function Navbar({ handleOpenSideBar, Isshow }, props) {
             </ul>
 
             <div className="other__option">
-              <form
-                action=""
-                className={`search__form ${activeClass} ${hideClass}`}
-              >
-                <input type="text" placeholder="SEARCH" />
-                <i className="fas fa-search"></i>
-              </form>
+              <div ref={ref} className="nav-search">
+                <div
+                  // action=""
+                  // onSubmit={e => e.preventDefault()}
+                  className={`search__form ${activeClass} ${hideClass}`}
+                >
+                  <input
+                    type="text"
+                    placeholder="SEARCH"
+                    value={valueSearch || ''}
+                    onChange={handleChangeValue}
+                  />
+                  {loading && <div className="spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>}
+                  {/* <CloseIcon /> */}
+                  <i className="fas fa-search"></i>
+                </div>
+                {!!listProducts && listProducts.length > 0 && <div className="list-results">
+                  {!!listProducts &&
+                    listProducts.map((product) => (
+                      <div className="item-found" key={product.code}>
+                        <div className="img">
+                          <img src={product.url} alt="" />
+                        </div>
+                        <div className="content">
+                          <div className="text">
+                            <h4>{product.name.toUpperCase()}</h4>
+                            <p>{product.director}</p>
+                            <p>{product.release}</p>
+                          </div>
+                          <div className="price">${product.newPrice}</div>
+                        </div>
+                        <div className="cart">
+                          <button type="submit"
+                            className="default__btn"
+                            onClick={() => handleAddProduct(product)}
+                          >
+                            <i className="fas fa-shopping-cart"></i>
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                </div>}
+              </div>
 
               <div className={`nav__cart ${activeClass}`}>
                 <NavLink to="/cart" className="nav__cart__link">
@@ -217,8 +330,8 @@ function Navbar({ handleOpenSideBar, Isshow }, props) {
               </div>
             </div>
           </Nav>
-        </div>
-      </MainNav>
+        </div >
+      </MainNav >
     </>
   );
 }
